@@ -5,9 +5,20 @@ const body = document.querySelector('body');
 
 body.addEventListener('click', () => {
     body.style.backgroundColor='rebeccapurple';
+    console.log('body changed');
 })
 
-console.log('body changed');
+
+const head = document.querySelectorAll('h2');
+
+head[0].addEventListener('click', (event) => {
+    head[0].style.color = 'white';
+    console.log('head changed');
+    event.stopPropagation();
+})
+
+
+
 
 //mouseover
 document.querySelectorAll('a').forEach(navi => {
