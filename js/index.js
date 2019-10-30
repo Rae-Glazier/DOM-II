@@ -18,8 +18,6 @@ head[0].addEventListener('click', (event) => {
 })
 
 
-
-
 //mouseover
 document.querySelectorAll('a').forEach(navi => {
     navi.addEventListener('mouseover', () => {
@@ -104,3 +102,12 @@ text[9].addEventListener('contextmenu', () => {
 })
 
 console.log('thats all folks');
+
+//preventDefault
+
+const stopLink = document.querySelector('.nav-link');
+
+stopLink.addEventListener('click', () => {
+    console.log('its dead jim');
+    event.preventDefault();
+})
